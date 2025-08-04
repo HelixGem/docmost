@@ -8,6 +8,7 @@ WORKDIR /app
 COPY . .
 
 RUN npm install -g pnpm@10.4.0
+ENV NX_DAEMON=false
 RUN pnpm install --frozen-lockfile
 RUN pnpm build
 
